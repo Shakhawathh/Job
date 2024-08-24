@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Portal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,8 +30,23 @@
                 <a href="#">Companies</a>
             </div>
 
-            <div>
-                <a href="">Post a Job</a>
+            @auth
+                <div>
+                    <a href="/jobs/create">Post a Job</a>
+                </div>
+            @endauth
+            @guest
+                <div>
+                  
+            <div class="space-x-6 font-bold">
+                <a href="/register">Sign Up</a>
+                <a href="/login">Login</a>
+                
+            </div>
+
+                </div>
+            @endguest
+                <div>
             </div>
         </nav>
 
