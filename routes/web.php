@@ -9,8 +9,9 @@
 
   Route::get('/', [JobController::class, 'index']);
 
-  Route::get('/jobs/create', [JobController::class, 'create']);
-  Route::post('/jobs', [JobController::class, 'store']);
+  Route::get('/jobs/create', [JobController::class, 'create'])->middleware('auth');
+  Route::post('/jobs', [JobController::class, 'store'])->middleware('auth');
+  Route::get('/jobs', [JobController::class, 'show'])->middleware('auth');
 
   Route::get('/search', SearchController::class);
   Route::get('/tags/{tag:name}', TagController::class);
@@ -19,6 +20,7 @@
 
     Route::get('/register', [RegisteredController::class, 'create']);
     Route::post('/register', [RegisteredController::class, 'store']);
+
     Route::get('/login', [SessionController::class, 'create']);
     Route::post('/login', [SessionController::class, 'store']);
   });

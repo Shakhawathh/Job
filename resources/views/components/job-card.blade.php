@@ -12,7 +12,7 @@
             </a>
             
             </h3>
-        <p class="text-sm mt-4">{{ $job->title }}</p>
+        <p class="text-sm mt-4">{{ $job->salary }}</p>
     </div>
 
     <div class="flex justify-between items-center mt-auto">
@@ -22,7 +22,7 @@
         @endforeach
 
         </div>
-        <x-employer-logo :width="42" />
+        <x-employer-logo :employer="$job->employer" :width="42" />
 
     </div>
 </x-panel>
