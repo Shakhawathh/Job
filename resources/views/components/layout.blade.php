@@ -19,7 +19,7 @@
         <nav class="flex justify-between items-center py-4 border-b border-white/10">
             <div>
                 <a href="/">
-                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/logo.png') }}" class="w-10" alt="">
                 </a>
 
             </div>
