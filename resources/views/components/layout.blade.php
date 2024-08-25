@@ -66,4 +66,5 @@
     </div>
 
 </body>
+<x-footer></x-footer>
 </html>

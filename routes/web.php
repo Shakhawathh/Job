@@ -26,3 +26,5 @@
   });
 
   Route::delete('/logout', [SessionController::class, 'destroy'])->middleware('auth');
+
+  Route::view('/footer', 'footer');
